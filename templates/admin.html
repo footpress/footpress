@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<!-- [if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif] -->
+<!-- [if IE 7 ]><html class="ie ie7" lang="en"> <![endif] -->
+<!-- [if IE 8 ]><html class="ie ie8" lang="en"> <![endif] -->
+<!-- [if (gte IE 9)|!(IE)]><! -->
+<html lang="en">
+    <!-- <![endif] -->
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta
+            http-equiv="X-UA-Compatible"
+            content="IE=edge"
+        >
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1"
+        >
+        <meta
+            name="description"
+            content
+        >
+        <meta
+            name="author"
+            content
+        >
+        <meta
+            name="keywords"
+            content
+        >
+
+        <title>Foot API</title>
+
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/font-awesome-4.3.0/css/font-awesome.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- [if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif] -->
+
+    </head>
+
+    <body>
+        <div id="wrapper">
+
+            <div class="container">
+
+                <section
+                    id="top"
+                    class="section docs-heading"
+                >
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="big-title text-center">
+                                <h1>
+                                    Welcome to the Official Football Website
+                                </h1>
+                                <p class="lead">
+                                    Find rules and players of this amazing sport
+                                </p>
+                            </div>
+                            <!-- end title -->
+                        </div>
+                        <!-- end 12 -->
+                    </div>
+                    <!-- end row -->
+
+                    <hr>
+
+                </section>
+                <!-- end section -->
+
+                <div class="row">
+
+                    <div class="col-md-3">
+                        <nav
+                            class="docs-sidebar"
+                            data-spy="affix"
+                            data-offset-top="300"
+                            data-offset-bottom="200"
+                            role="navigation"
+                        >
+                            <ul class="nav">
+                                <li>
+                                    <a href="#line1">Supporters</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-9">
+
+                        <section
+                            id="line1"
+                            class="section"
+                        >
+
+                            <div class="row">
+                                <div class="col-md-12 left-align">
+                                    <h2 class="dark-text">Supporters</h2>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    {% for supporter in supporters %}
+                                    <pre>{{supporter.email}} / {{supporter.password}}</pre>
+                                    {% endfor %}
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+
+                        </section>
+
+                        <section
+                            id="line11"
+                            class="section"
+                        >
+
+                            <div class="row">
+                                <div class="col-md-12 left-align">
+                                    <h2 class="dark-text">
+                                        Copyright and license
+                                        <hr>
+                                    </h2>
+                                </div>
+                                <!-- end col -->
+                            </div>
+                            <!-- end row -->
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="copyright">
+                                        Website powered by the footpress framework.
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- end row -->
+
+                        </section>
+                        <!-- end section -->
+                    </div>
+                    <!-- // end .col -->
+
+                </div>
+                <!-- // end .row -->
+
+            </div>
+            <!-- // end container -->
+
+        </div>
+        <!-- end wrapper -->
+
+        <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+        <!-- CUSTOM PLUGINS -->
+        <script src="{{ url_for('static', filename='') }}js/custom.js"></script>
+        <script src="{{ url_for('static', filename='') }}js/main.js"></script>
+
+    </body>
+
+</html>
